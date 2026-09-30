@@ -81,12 +81,22 @@ function displayResults(results) {
 
         storeCard.className = "store-card";
 
-        storeCard.innerHTML = `
-            <h3>${store.name}</h3>
-            <p><strong>Type:</strong> ${store.type}</p>
-            <p><strong>Address:</strong> ${store.address}</p>
-            <p><strong>Postcode:</strong> ${store.postcode}</p>
-        `;
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.address)}`;
+
+storeCard.innerHTML = `
+    <h3>${store.name}</h3>
+    <p><strong>Type:</strong> ${store.type}</p>
+    <p><strong>Address:</strong> ${store.address}</p>
+    <p><strong>Postcode:</strong> ${store.postcode}</p>
+    <a 
+        href="${mapsUrl}" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="directions-button"
+    >
+        Get Directions
+    </a>
+`;
 
         resultsContainer.appendChild(storeCard);
     });
