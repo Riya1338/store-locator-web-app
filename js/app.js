@@ -3,57 +3,58 @@ const stores = [
         name: "Christchurch Central Store",
         city: "Christchurch",
         postcode: "8011",
-        type: "Retail",
+        type: "Grocery",
         address: "123 Colombo Street, Christchurch"
     },
     {
-        name: "Riccarton Store",
+        name: "Riccarton Electronics",
         city: "Christchurch",
         postcode: "8041",
-        type: "Retail",
+        type: "Electronics",
         address: "45 Riccarton Road, Christchurch"
     },
     {
-        name: "Hornby Distribution Centre",
+        name: "Hornby Pharmacy",
         city: "Christchurch",
         postcode: "8042",
-        type: "Warehouse",
+        type: "Pharmacy",
         address: "78 Main South Road, Christchurch"
     },
     {
-        name: "Addington Service Centre",
+        name: "Addington Clothing Store",
         city: "Christchurch",
         postcode: "8024",
-        type: "Service",
+        type: "Clothing",
         address: "22 Lincoln Road, Christchurch"
     },
     {
-        name: "Papanui Store",
+        name: "Papanui Grocery Store",
         city: "Christchurch",
         postcode: "8052",
-        type: "Retail",
+        type: "Grocery",
         address: "15 Main North Road, Christchurch"
     }
 ];
 
-const searchButton = document.getElementById("searchButton");
+const searchForm = document.getElementById("searchForm");
 const locationInput = document.getElementById("location");
-const storeType = document.getElementById("storeType");
+const storeType = document.getElementById("type");
 const resultsContainer = document.getElementById("storeResults");
+const resultCount = document.getElementById("resultCount");
+const status = document.getElementById("status");
 
 function searchStores() {
     const location = locationInput.value.trim().toLowerCase();
     const type = storeType.value;
 
     const results = stores.filter(store => {
-
         const matchesLocation =
             location === "" ||
             store.city.toLowerCase().includes(location) ||
             store.postcode.includes(location);
 
         const matchesType =
-            type === "All" ||
+            type === "" ||
             store.type === type;
 
         return matchesLocation && matchesType;
@@ -63,22 +64,20 @@ function searchStores() {
 }
 
 function displayResults(results) {
-
     resultsContainer.innerHTML = "";
+    status.textContent = "";
+
+    resultCount.textContent =
+        `${results.length} store${results.length === 1 ? "" : "s"} found`;
 
     if (results.length === 0) {
-        resultsContainer.innerHTML = `
-            <div class="no-results">
-                <h3>No stores found</h3>
-                <p>Try another city, postcode, or store type.</p>
-            </div>
-        `;
+        status.textContent =
+            "No stores found. Try another city, postcode, or store type.";
         return;
     }
 
     results.forEach(store => {
-
-        const storeCard = document.createElement("div");
+        const storeCard = document.createElement("article");
 
         storeCard.className = "store-card";
 
@@ -93,6 +92,9 @@ function displayResults(results) {
     });
 }
 
-searchButton.addEventListener("click", searchStores);
+searchForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    searchStores();
+});
 
 displayResults(stores);
