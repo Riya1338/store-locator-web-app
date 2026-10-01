@@ -18,3 +18,4 @@
 | TC-014 | Search with invalid postcode letters | `80AB` | No stores found message is displayed | PASS |
 | TC-015 | Very long search input | 50-digit input | No stores found message is displayed and page remains responsive | PASS |
 | TC-016 | Refresh page after search | Search 8041, then refresh | Page loads normally and all 5 stores are displayed | PASS |
+| TC-017 | Repeated search | 8041, then 8011 | Results update correctly and only Christchurch Central Store is displayed | PASS |
