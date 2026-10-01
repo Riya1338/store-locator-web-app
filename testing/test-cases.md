@@ -6,7 +6,7 @@
 | TC-002 | Verify all stores display | None | 5 stores are displayed when the page loads | PASS |
 | TC-003 | Search by valid postcode | 8041 | Riccarton Electronics is displayed | PASS |
 | TC-004 | Search by city | Christchurch | Christchurch stores are displayed | PASS |
-| TC-005 | Search by invalid postcode | 9999 | No stores found message is displayed | Not Run |
+| TC-005 | Search by invalid postcode | 9999 | No stores found message is displayed | PASS |
 | TC-006 | Filter by Grocery | Grocery | Only Grocery stores are displayed | Not Run |
 | TC-007 | Filter by Electronics | Electronics | Only Electronics stores are displayed | Not Run |
 | TC-008 | Filter by Pharmacy | Pharmacy | Only Pharmacy stores are displayed | Not Run |
