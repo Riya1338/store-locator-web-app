@@ -17,3 +17,4 @@
 | TC-013 | Search with special characters | `@#$%` | No stores found message is displayed | PASS |
 | TC-014 | Search with invalid postcode letters | `80AB` | No stores found message is displayed | PASS |
 | TC-015 | Very long search input | 50-digit input | No stores found message is displayed and page remains responsive | PASS |
+| TC-016 | Refresh page after search | Search 8041, then refresh | Page loads normally and all 5 stores are displayed | PASS |
