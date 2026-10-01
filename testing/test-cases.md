@@ -2,7 +2,7 @@
 
 | Test Case ID | Test Scenario | Test Data | Expected Result | Status |
 |---|---|---|---|---|
-| TC-001 | Verify website loads | URL | Store Locator page loads successfully | Not Run |
+| TC-001 | Verify website loads | URL | Store Locator page loads successfully | PASS |
 | TC-002 | Verify all stores display | None | 5 stores are displayed | Not Run |
 | TC-003 | Search by valid postcode | 8041 | Riccarton Electronics is displayed | Not Run |
 | TC-004 | Search by city | Christchurch | Christchurch stores are displayed | Not Run |
