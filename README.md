@@ -2,7 +2,7 @@
 
 A full-stack portfolio project demonstrating frontend development, JavaScript, PHP, MySQL, database design, manual software testing, debugging, and Git/GitHub workflow.
 
-## Live Demo
+## Live Demo    
 
 [View the Store Locator](https://riya1338.github.io/store-locator-web-app/)
 ## Screenshots
