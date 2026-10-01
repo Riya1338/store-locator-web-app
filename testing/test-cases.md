@@ -14,3 +14,4 @@
 | TC-010 | Search by postcode and store type | 8041 + Electronics | Riccarton Electronics is displayed | PASS |
 | TC-011 | Empty search | Empty location + All stores | All 5 stores are displayed | PASS |
 | TC-012 | Search with spaces around postcode | ` 8041 ` | Riccarton Electronics is displayed | PASS |
+| TC-013 | Search with special characters | `@#$%` | No stores found message is displayed | PASS |
