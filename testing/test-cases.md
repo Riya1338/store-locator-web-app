@@ -16,3 +16,4 @@
 | TC-012 | Search with spaces around postcode | ` 8041 ` | Riccarton Electronics is displayed | PASS |
 | TC-013 | Search with special characters | `@#$%` | No stores found message is displayed | PASS |
 | TC-014 | Search with invalid postcode letters | `80AB` | No stores found message is displayed | PASS |
+| TC-015 | Very long search input | 50-digit input | No stores found message is displayed and page remains responsive | PASS |
