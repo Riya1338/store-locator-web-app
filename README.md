@@ -14,7 +14,6 @@ A full-stack portfolio project demonstrating frontend development, JavaScript, P
 ### Search Results
 
 ![Store Locator Search Results](screenshots/Search-Result.png)
-
 ## Features
 
 * Search stores by city or postcode
