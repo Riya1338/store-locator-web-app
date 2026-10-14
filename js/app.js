@@ -215,19 +215,30 @@ function displayResults(results) {
         const postcodeText = document.createElement("p");
         postcodeText.textContent = `Postcode: ${store.postcode}`;
 
+        
+        const mapLink = document.createElement("a");
+        mapLink.href =
+            `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.name + ", " + store.address)}`;
+        mapLink.target = "_blank";
+        mapLink.rel = "noopener noreferrer";
+        mapLink.className = "directions-button";
+        mapLink.textContent = "View on Map";
+        
         const directions = document.createElement("a");
         directions.href =
-            `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.address)}`;
+            `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(store.name + ", " + store.address)}`;
         directions.target = "_blank";
         directions.rel = "noopener noreferrer";
         directions.className = "directions-button";
         directions.textContent = "Get Directions";
+
 
         card.append(
             heading,
             typeText,
             addressText,
             postcodeText,
+            mapLink,
             directions
         );
 
