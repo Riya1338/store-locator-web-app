@@ -127,6 +127,14 @@ const stores = [
         postcode: "8011",
         type: "Clothing",
         address: "Shop 9, The Crossing, Market Lane, Christchurch 8011"
+    },
+    {
+        name: "PAK'nSAVE Riccarton",
+        type: "Grocery",
+        city: "Christchurch",
+        suburb: "Riccarton",
+        postcode: "8041",
+        address: "Westfield Riccarton, 129 Riccarton Road, Christchurch 8041"
     }
 ];
 
